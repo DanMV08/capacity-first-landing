@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aplica | Dan Mezquía — Sistemas de captación high-ticket</title>
+<meta name="description" content="Responde 5 preguntas rápidas y descubre si tu negocio está listo para un sistema de captación high-ticket.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   SISTEMA DE DISEÑO — mismo :root que index.html
+   ============================================================ */
+:root{
+  --oscuro:#0C1220; --oscuro-suave:#131C30;
+  --claro:#F9F8F5; --crema:#F1EDE4; --nude:#E7E1D3;
+  --acento:#C4764A; --acento-suave:#E0A379;
+  --premium:#C98F52; --premium-claro:#E8BE8D;
+  --muted:#7C6A55; --muted-claro:#AAB3C5;
+  --serif:'Fraunces',serif; --sans:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--sans);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:34px 18px 60px;color:var(--claro);
+  background:radial-gradient(at 50% -10%,rgba(201,143,82,.18) 0%,transparent 55%),var(--oscuro);}
+
+/* marca + progreso */
+.survey-brand{font-family:var(--serif);font-size:21px;letter-spacing:.5px;margin-bottom:26px;}
+.survey-brand em{font-style:italic;color:var(--acento-suave);}
+.survey-progress{width:min(520px,90vw);height:3px;background:rgba(255,255,255,.1);border-radius:3px;margin-bottom:34px;overflow:hidden;}
+.survey-progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--premium-claro),var(--premium));transition:width .5s cubic-bezier(.2,.7,.2,1);}
+
+/* card central */
+.survey-card{width:min(560px,94vw);background:var(--claro);color:var(--oscuro);border-radius:8px;padding:44px 40px;box-shadow:0 30px 80px rgba(0,0,0,.5);}
+
+/* pasos */
+.step{display:none;animation:entrar .45s cubic-bezier(.2,.7,.2,1);}
+.step.active{display:block;}
+@keyframes entrar{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.step h2{font-family:var(--serif);font-size:clamp(20px,3vw,25px);font-weight:600;line-height:1.35;margin-bottom:8px;}
+.step-sub{font-size:13.5px;color:var(--muted);margin-bottom:22px;}
+.step h2 + .opciones,.step h2 + .campos{margin-top:24px;}
+
+/* opciones clicables */
+.opciones{display:flex;flex-direction:column;gap:11px;}
+.opcion{border:1.5px solid rgba(124,106,85,.28);border-radius:6px;padding:15px 18px;font-size:14.5px;font-weight:500;cursor:pointer;transition:all .2s ease;background:#fff;display:flex;align-items:center;gap:12px;}
+.opcion:hover{border-color:var(--acento);transform:translateX(3px);}
+.opcion.sel{border-color:var(--acento);background:rgba(196,118,74,.07);box-shadow:0 6px 18px rgba(196,118,74,.14);}
+.opcion .check{flex:none;width:20px;height:20px;border-radius:50%;border:1.5px solid rgba(124,106,85,.4);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;transition:all .2s;}
+.opcion.sel .check{background:var(--acento);border-color:var(--acento);}
+.opcion.multi .check{border-radius:4px;}
+
+/* campos de datos */
+.campos{display:flex;flex-direction:column;gap:13px;}
+.campos input{font:500 15px var(--sans);padding:15px 16px;border:1.5px solid rgba(124,106,85,.28);border-radius:6px;background:#fff;color:var(--oscuro);outline:none;transition:border .2s;}
+.campos input:focus{border-color:var(--acento);}
+.campos input.error{border-color:#C0392B;}
+.error-msg{font-size:12.5px;color:#C0392B;display:none;}
+
+/* navegación */
+.survey-nav{display:flex;justify-content:space-between;align-items:center;margin-top:30px;}
+.btn-atras{background:none;border:none;font:500 13.5px var(--sans);color:var(--muted);cursor:pointer;padding:10px 6px;visibility:hidden;}
+.btn-atras:hover{color:var(--oscuro);}
+.btn-sig{border:none;cursor:pointer;background:linear-gradient(135deg,var(--premium-claro),var(--premium));color:#161006;font:600 13px/1 var(--sans);letter-spacing:1.6px;text-transform:uppercase;padding:15px 34px;border-radius:2px;box-shadow:0 10px 24px rgba(201,143,82,.3);transition:transform .2s;}
+.btn-sig:hover{transform:translateY(-2px);}
+.btn-sig:disabled{opacity:.45;cursor:not-allowed;transform:none;}
+
+/* thank-you pages */
+.resultado{text-align:center;}
+.resultado .icono{width:64px;height:64px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,var(--premium-claro),var(--premium));display:flex;align-items:center;justify-content:center;font-size:28px;}
+.resultado h2{margin-bottom:10px;}
+.resultado p{font-size:14.5px;color:var(--muted);max-width:400px;margin:0 auto 6px;}
+.calendly-box{margin-top:24px;border:1px solid rgba(124,106,85,.2);border-radius:6px;overflow:hidden;min-height:640px;}
+.wa-btn{display:inline-block;margin-top:22px;background:#25D366;color:#fff;font:600 13px/1 var(--sans);letter-spacing:1px;text-transform:uppercase;padding:15px 30px;border-radius:6px;}
+.confirmado{display:none;margin-top:20px;padding:16px;border-radius:6px;background:rgba(37,211,102,.12);color:#1E7A43;font-weight:600;font-size:14.5px;}
+
+.volver{margin-top:26px;font-size:12.5px;color:var(--muted-claro);}
+.volver a{color:var(--acento-suave);text-decoration:underline;}
+
+@media(max-width:480px){.survey-card{padding:32px 22px;}}
+</style>
+</head>
+<body>
+
+<div class="survey-brand">Dan <em>Mezquía</em></div>
+<div class="survey-progress"><div class="survey-progress-fill" id="progress"></div></div>
+
+<div class="survey-card">
+
+  <!-- P1 · CALIFICACIÓN BASE (si "no", salta P2) -->
+  <div class="step active" data-step="0">
+    <h2>¿Ya vendes un programa o servicio high-ticket (más de $1,000)?</h2>
+    <div class="opciones" data-campo="oferta">
+      <div class="opcion" data-val="si"><span class="check">✓</span>Sí, ya lo vendo</div>
+      <div class="opcion" data-val="no"><span class="check">✓</span>Todavía no, pero estoy por lanzarlo</div>
+    </div>
+  </div>
+
+  <!-- P2 · SITUACIÓN ACTUAL -->
+  <div class="step" data-step="1">
+    <h2>¿Cuánto está facturando tu negocio al mes actualmente?</h2>
+    <div class="opciones" data-campo="facturacion">
+      <div class="opcion" data-val="mas10000"><span class="check">✓</span>Más de $10,000</div>
+      <div class="opcion" data-val="entre5000_10000"><span class="check">✓</span>$5,000 – $10,000</div>
+      <div class="opcion" data-val="entre2000_5000"><span class="check">✓</span>$2,000 – $5,000</div>
+      <div class="opcion" data-val="menos2000"><span class="check">✓</span>Menos de $2,000</div>
+    </div>
+  </div>
+
+  <!-- P3 · AMBICIÓN -->
+  <div class="step" data-step="2">
+    <h2>¿Dónde quieres estar en los próximos 6 meses?</h2>
+    <div class="opciones" data-campo="meta">
+      <div class="opcion" data-val="mas20000"><span class="check">✓</span>Más de $20,000/mes</div>
+      <div class="opcion" data-val="entre10000_20000"><span class="check">✓</span>$10,000 – $20,000/mes</div>
+      <div class="opcion" data-val="entre5000_10000"><span class="check">✓</span>$5,000 – $10,000/mes</div>
+    </div>
+  </div>
+
+  <!-- P4 · COMPROMISO (multi-select) -->
+  <div class="step" data-step="3">
+    <h2>¿Cuáles de estas estás dispuesto a hacer?</h2>
+    <div class="step-sub">Selecciona todas las que apliquen.</div>
+    <div class="opciones" data-campo="compromiso" data-multi="1">
+      <div class="opcion multi" data-val="vsl"><span class="check">✓</span>Grabar un video corto contando tu método (te doy el guion)</div>
+      <div class="opcion multi" data-val="delegar"><span class="check">✓</span>Delegar la parte técnica y confiar en el proceso</div>
+      <div class="opcion multi" data-val="llamadas"><span class="check">✓</span>Atender las llamadas que el sistema te agende</div>
+      <div class="opcion multi" data-val="trafico"><span class="check">✓</span>Invertir en tráfico o contenido para alimentar el sistema</div>
+    </div>
+  </div>
+
+  <!-- P5 · CAPACIDAD DE INVERSIÓN -->
+  <div class="step" data-step="4">
+    <h2>Si esto es exactamente lo que tu negocio necesita, ¿cuánto estás dispuesto a invertir en tu sistema de captación?</h2>
+    <div class="opciones" data-campo="inversion">
+      <div class="opcion" data-val="mas3000"><span class="check">✓</span>Más de $3,000</div>
+      <div class="opcion" data-val="entre1500_3000"><span class="check">✓</span>$1,500 – $3,000</div>
+      <div class="opcion" data-val="entre800_1500"><span class="check">✓</span>$800 – $1,500</div>
+      <div class="opcion" data-val="menos800"><span class="check">✓</span>Menos de $800</div>
+    </div>
+  </div>
+
+  <!-- P6 · DATOS -->
+  <div class="step" data-step="5">
+    <h2>Ya casi terminamos</h2>
+    <div class="step-sub">Déjame tus datos para enviarte tu resultado.</div>
+    <div class="campos">
+      <input type="text" id="input-nombre" placeholder="Nombre completo" autocomplete="name">
+      <input type="tel" id="input-whatsapp" placeholder="Número de WhatsApp" autocomplete="tel">
+      <input type="email" id="input-email" placeholder="Email" autocomplete="email">
+      <span class="error-msg" id="error-msg">Revisa los campos marcados — necesito los tres para enviarte tu resultado.</span>
+    </div>
+  </div>
+
+  <!-- THANK-YOU ALTO: calendario directo -->
+  <div class="step resultado" data-resultado="alto">
+    <div class="icono">🎯</div>
+    <h2>¡Perfecto, <span class="ty-nombre">crack</span>! Ya puedes agendar tu llamada de estrategia</h2>
+    <p>Tu negocio está listo para el sistema. Elige el horario que mejor te funcione — la llamada es directa con Dan.</p>
+    <div class="calendly-box" id="calendly-alto"></div>
+    <div class="confirmado">✓ Llamada agendada — revisa tu correo para la confirmación.</div>
+  </div>
+
+  <!-- THANK-YOU MEDIO: calendario con copy suave -->
+  <div class="step resultado" data-resultado="medio">
+    <div class="icono">💬</div>
+    <h2>¡Gracias, <span class="ty-nombre">crack</span>! Nos encantaría conocer tu negocio</h2>
+    <p>Por tus respuestas, hay mucho que podemos hacer por tu captación. Agenda una llamada sin compromiso y lo vemos juntos.</p>
+    <div class="calendly-box" id="calendly-medio"></div>
+    <div class="confirmado">✓ Llamada agendada — revisa tu correo para la confirmación.</div>
+  </div>
+
+  <!-- THANK-YOU BAJO: sin calendario, contacto por WhatsApp -->
+  <div class="step resultado" data-resultado="bajo">
+    <div class="icono">🤝</div>
+    <h2>¡Gracias por responder, <span class="ty-nombre">crack</span>!</h2>
+    <p>Hemos recibido tus respuestas. En breve te escribiré por WhatsApp con el siguiente paso ideal para el punto en el que está tu negocio.</p>
+    <a class="wa-btn" id="wa-btn" href="#" target="_blank" rel="noopener">Escribirme por WhatsApp</a>
+  </div>
+
+  <!-- navegación -->
+  <div class="survey-nav" id="nav">
+    <button type="button" class="btn-atras" id="btn-atras">← Atrás</button>
+    <button type="button" class="btn-sig" id="btn-sig" disabled>Siguiente</button>
+  </div>
+</div>
+
+<div class="volver"><a href="./index.html">← Volver a la página principal</a></div>
+
+<script>
+/* ============================================================
+   CONFIGURACIÓN — cambiar SOLO aquí
+   ============================================================ */
+const WEBHOOK_URL  = '';                                   // [PENDIENTE] webhook de Make/Zapier/n8n/CRM
+const CALENDLY_URL = '';                                   // [PENDIENTE] ej: https://calendly.com/danmezquia/estrategia
+const WHATSAPP     = '';                                   // [PENDIENTE] ej: 13051234567 (con código de país, sin +)
+const ORIGEN       = 'Funnel Sistema Captación - Dan Mezquía';
+
+/* etiquetas legibles para el CRM */
+const LABELS = {
+  oferta:      { si:'Sí, ya vende high-ticket', no:'Aún no, por lanzar' },
+  facturacion: { mas10000:'Más de $10,000/mes', entre5000_10000:'$5,000–$10,000/mes', entre2000_5000:'$2,000–$5,000/mes', menos2000:'Menos de $2,000/mes' },
+  meta:        { mas20000:'Más de $20,000/mes', entre10000_20000:'$10,000–$20,000/mes', entre5000_10000:'$5,000–$10,000/mes' },
+  compromiso:  { vsl:'Grabar VSL', delegar:'Delegar lo técnico', llamadas:'Atender llamadas', trafico:'Invertir en tráfico/contenido' },
+  inversion:   { mas3000:'Más de $3,000', entre1500_3000:'$1,500–$3,000', entre800_1500:'$800–$1,500', menos800:'Menos de $800' }
+};
+
+/* ============================================================
+   ESTADO Y NAVEGACIÓN
+   ============================================================ */
+const state = { oferta:null, facturacion:null, meta:null, compromiso:[], inversion:null, nombre:'', whatsapp:'', email:'' };
+const steps = [...document.querySelectorAll('.step[data-step]')];
+const fill = document.getElementById('progress');
+const btnSig = document.getElementById('btn-sig');
+const btnAtras = document.getElementById('btn-atras');
+let idx = 0;
+const historial = [];
+
+function mostrar(i){
+  steps.forEach(s => s.classList.remove('active'));
+  steps[i].classList.add('active');
+  fill.style.width = ((i+1)/(steps.length+1))*100 + '%';
+  btnAtras.style.visibility = historial.length ? 'visible' : 'hidden';
+  btnSig.textContent = (i === steps.length-1) ? 'Ver mi resultado' : 'Siguiente';
+  validar();
+}
+
+function validar(){
+  const paso = steps[idx];
+  const campo = paso.querySelector('[data-campo]')?.dataset.campo;
+  let ok = false;
+  if (campo === 'compromiso') ok = state.compromiso.length > 0;
+  else if (campo)             ok = !!state[campo];
+  else ok = true;                     /* paso de datos: se valida al enviar */
+  btnSig.disabled = !ok;
+}
+
+/* selección de opciones (single y multi) */
+document.querySelectorAll('[data-campo]').forEach(grupo => {
+  const campo = grupo.dataset.campo, multi = !!grupo.dataset.multi;
+  grupo.querySelectorAll('.opcion').forEach(op => op.addEventListener('click', () => {
+    if (multi) {
+      op.classList.toggle('sel');
+      const v = op.dataset.val;
+      state.compromiso = op.classList.contains('sel')
+        ? [...state.compromiso, v] : state.compromiso.filter(x => x !== v);
+    } else {
+      grupo.querySelectorAll('.opcion').forEach(o => o.classList.remove('sel'));
+      op.classList.add('sel');
+      state[campo] = op.dataset.val;
+      /* auto-avance en single select tras una pausa breve */
+      setTimeout(avanzar, 350);
+    }
+    validar();
+  }));
+});
+
+function avanzar(){
+  if (btnSig.disabled) return;
+  if (idx === steps.length-1) { finalizar(); return; }
+  historial.push(idx);
+  /* lógica condicional: sin oferta aún → salta la pregunta de facturación */
+  idx = (idx === 0 && state.oferta === 'no') ? 2 : idx + 1;
+  mostrar(idx);
+}
+btnSig.addEventListener('click', avanzar);
+btnAtras.addEventListener('click', () => { if (historial.length) { idx = historial.pop(); mostrar(idx); } });
+
+/* ============================================================
+   LEAD SCORING
+   Alto ≥70% · Medio ≥40% · Bajo <40%
+   ============================================================ */
+function calcular(){
+  let puntos = 0, max = 0;
+  if (state.oferta === 'si') {
+    max += 3;
+    puntos += { mas10000:3, entre5000_10000:2, entre2000_5000:1, menos2000:0 }[state.facturacion] || 0;
+  }
+  max += 3;
+  puntos += { mas20000:3, entre10000_20000:2, entre5000_10000:1 }[state.meta] || 0;
+  max += 4;
+  puntos += state.compromiso.length;
+  max += 3;
+  puntos += { mas3000:3, entre1500_3000:2, entre800_1500:1, menos800:0 }[state.inversion] || 0;
+  const pct = Math.round((puntos/max)*100);
+  const valor = pct >= 70 ? 'Alto' : pct >= 40 ? 'Medio' : 'Bajo';
+  return { puntos, max, pct, valor };
+}
+
+/* ============================================================
+   ENVÍO + THANK-YOU PERSONALIZADA
+   ============================================================ */
+function finalizar(){
+  /* validar datos de contacto */
+  const nombre = document.getElementById('input-nombre');
+  const wa = document.getElementById('input-whatsapp');
+  const email = document.getElementById('input-email');
+  let ok = true;
+  [[nombre, v => v.trim().length >= 3],
+   [wa,     v => v.replace(/\D/g,'').length >= 8],
+   [email,  v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)]].forEach(([el, test]) => {
+    const valido = test(el.value);
+    el.classList.toggle('error', !valido);
+    if (!valido) ok = false;
+  });
+  document.getElementById('error-msg').style.display = ok ? 'none' : 'block';
+  if (!ok) return;
+
+  state.nombre = nombre.value.trim();
+  state.whatsapp = wa.value.trim();
+  state.email = email.value.trim();
+
+  const r = calcular();
+
+  /* payload legible para el CRM */
+  const payload = {
+    oferta: LABELS.oferta[state.oferta],
+    facturacion_actual: state.facturacion ? LABELS.facturacion[state.facturacion] : 'No aplica (aún sin oferta)',
+    meta_6_meses: LABELS.meta[state.meta],
+    compromiso: state.compromiso.map(c => '- ' + LABELS.compromiso[c]).join('\n') || 'Ninguno',
+    inversion_disponible: LABELS.inversion[state.inversion],
+    valor: r.valor,
+    puntaje: r.puntos + '/' + r.max + ' (' + r.pct + '%)',
+    nombre: state.nombre, whatsapp: state.whatsapp, email: state.email,
+    origen: ORIGEN
+  };
+
+  if (WEBHOOK_URL) {
+    fetch(WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) })
+      .catch(err => console.error('Error enviando al webhook:', err));
+  } else {
+    console.log('[Survey] WEBHOOK_URL vacío — payload que se habría enviado:', payload);
+  }
+
+  mostrarResultado(r.valor);
+}
+
+function mostrarResultado(valor){
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.getElementById('nav').style.display = 'none';
+  fill.style.width = '100%';
+
+  const primerNombre = state.nombre.split(' ')[0];
+  document.querySelectorAll('.ty-nombre').forEach(el => el.textContent = primerNombre);
+
+  const key = valor.toLowerCase();
+  const pantalla = document.querySelector('[data-resultado="' + (key === 'bajo' ? 'bajo' : key) + '"]');
+  pantalla.classList.add('active');
+
+  if (valor === 'Bajo') {
+    const btn = document.getElementById('wa-btn');
+    if (WHATSAPP) {
+      btn.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Hola Dan, acabo de aplicar en tu web. Soy ' + primerNombre + '.');
+    } else { btn.style.display = 'none'; }
+    return;
+  }
+
+  /* Calendly inline con PREFILL: nombre + email + score en utm_content */
+  const box = document.getElementById('calendly-' + key);
+  if (!CALENDLY_URL) {
+    box.innerHTML = '<p style="padding:40px 20px;color:var(--muted);font-size:14px;">[PENDIENTE] Aquí se mostrará el calendario.<br>Conecta tu link en la constante CALENDLY_URL.</p>';
+    box.style.minHeight = 'auto';
+    return;
+  }
+  const url = CALENDLY_URL
+    + '?name=' + encodeURIComponent(state.nombre)
+    + '&email=' + encodeURIComponent(state.email)
+    + '&utm_source=funnel&utm_campaign=' + encodeURIComponent(ORIGEN)
+    + '&utm_content=score-' + key + '-' + calcular().pct;
+  box.innerHTML = '<div class="calendly-inline-widget" data-url="' + url + '" style="min-width:300px;height:640px;"></div>';
+  const s = document.createElement('script');
+  s.src = 'https://assets.calendly.com/assets/external/widget.js';
+  s.async = true;
+  document.body.appendChild(s);
+
+  /* confirmación dentro de la página cuando el lead agenda */
+  window.addEventListener('message', e => {
+    if (e.data && e.data.event === 'calendly.event_scheduled') {
+      pantalla.querySelector('.confirmado').style.display = 'block';
+    }
+  });
+}
+
+mostrar(0);
+</script>
+</body>
+</html>

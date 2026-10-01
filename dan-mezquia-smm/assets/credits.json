@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "src": "assets/img/hero.jpg",
+    "title": "_K2A9588",
+    "creator": "Fortune Global Forum",
+    "creator_url": "https://www.flickr.com/photos/137225243@N02",
+    "license": "by-nc-nd",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/137225243@N02/54133706370",
+    "source": "flickr"
+  },
+  "service-1": {
+    "src": "assets/img/service-1.jpg",
+    "title": "Thenightwasyoung",
+    "creator": "Ashe",
+    "creator_url": "https://commons.wikimedia.org/w/index.php?title=User:Asheracting&action=edit&redlink=1",
+    "license": "by-sa",
+    "license_version": "4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=138292586",
+    "source": "wikimedia"
+  },
+  "service-2": {
+    "src": "assets/img/service-2.jpg",
+    "title": "Conversion Thursday: Visualización de Datos en Marketing Digital",
+    "creator": "Medialab Prado",
+    "creator_url": "https://www.flickr.com/photos/19185522@N06",
+    "license": "by-sa",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/19185522@N06/12816767275",
+    "source": "flickr"
+  },
+  "service-3": {
+    "src": "assets/img/service-3.jpg",
+    "title": "Green Godswill A",
+    "creator": "Green Godswill Ada",
+    "creator_url": "https://commons.wikimedia.org/w/index.php?title=User:Sokurunateghe&action=edit&redlink=1",
+    "license": "by-sa",
+    "license_version": "4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=125919526",
+    "source": "wikimedia"
+  },
+  "testimonial": {
+    "src": "assets/img/testimonial.jpg",
+    "title": "Kelley, Jhabvala, Shirron",
+    "creator": "NASA Goddard Space Flight Center",
+    "creator_url": "https://www.flickr.com/photos/35278629@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/35278629@N08/6560642059",
+    "source": "flickr"
+  }
+}

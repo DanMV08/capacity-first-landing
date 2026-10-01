@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<!-- saved from url=(0253)https://e39bda59-e09d-4701-a09c-2832c6acd079.frame.claudeusercontent.com/_f/1783634427-b6e3/?__frame_t=TLsya2yCu0n-FtY4A9YEoptu.f5171a41-e84a-4455-96da-4be54b50c6c3.894dbcc2-298f-4b5d-8032-1b490f10306e.1783959283&__frame_v=manifest.5cc09a92e9a1975c.json -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- frame-runtime --><!--<base href="/_f/1783634427-b6e3/">--><base href="."><script>window.__FRAME_PREAMBLE={"capabilities":{"downloads":"downloads.DUzXFHNF.js","mcp":"mcp.CmkefEYH.js","permissions":"permissions.C9OCnDjh.js","self":"self.DqF_PxOe.js"},"transforms":"_transforms.DYk1Ltlh.js","comments":"_comments.CTmG5kkF.js"}</script><script>(function(){"use strict";const ae="modulepreload",ce=function(e){return"/"+e},le={},x=function(t,n,u){let o=Promise.resolve();function s(d){const a=new Event("vite:preloadError",{cancelable:!0});if(a.payload=d,window.dispatchEvent(a),!a.defaultPrevented)throw d}return o.then(d=>{for(const a of d||[])a.status==="rejected"&&s(a.reason);return t().catch(s)})},K=["light","dark","system"];function G(e){if(e==null||typeof e!="object")return!1;const t=e.__frame_init;return t!=null&&typeof t=="object"}function J(e){return e!=null&&typeof e=="object"&&e.__frame_size_poke===!0}function V(e){if(e==null||typeof e!="object")return!1;const t=e.__frame_theme;if(t==null||typeof t!="object")return!1;const n=t.theme;return typeof n=="string"&&K.includes(n)}function z(e){if(window===top||e.type==="auxclick"&&e.button!==1)return;const t=e.composedPath?e.composedPath():[e.target];let n=null;for(let d=0;d<t.length;d++){const a=t[d];if(a&&a.matches&&a.matches("a[href],area[href]")){n=a;break}}if(!n&&e.target&&e.target.closest&&(n=e.target.closest("a[href],area[href]")),!n)return;const u=n.getAttribute("href");if(!u)return;let o,s;try{o=new URL(u,document.baseURI),s=new URL(document.baseURI).origin}catch{return}(o.protocol==="http:"||o.protocol==="https:")&&o.origin!==s&&(e.preventDefault(),parent.postMessage({__frame_nav:!0,url:o.href},"*"))}const D={};function T(e){if(window===top)return;const t=Date.now();t-(D[e]||0)<500||(D[e]=t,parent.postMessage({__frame_engaged:!0,kind:e},"*"))}const Y=2e3,U=["wheel","touchstart","touchmove","keydown","pointerdown"];let B=0;function Q(e){e.isTrusted&&(B=Date.now())}function X(){addEventListener("click",z,!0),addEventListener("auxclick",z,!0)}function Z(){for(let e=0;e<U.length;e++)addEventListener(U[e],Q,{capture:!0,passive:!0});addEventListener("scroll",e=>{e.isTrusted&&Date.now()-B<Y&&T("scroll")},{capture:!0,passive:!0}),addEventListener("pointermove",e=>{e.isTrusted&&T("pointer")},{capture:!0,passive:!0}),addEventListener("click",e=>{e.isTrusted&&T("click")},{capture:!0,passive:!0})}function ee(e,t,n){const u=[...t.values()].filter(o=>o.targets.some(s=>s.startsWith(e+".")));return{wrap(o,s){const d=`${e}.${o}`,a=u.filter(i=>i.targets.includes(d));return a.length===0?(...i)=>{try{return s(...i)}catch(p){return Promise.reject(p)}}:(...i)=>{let p=i;for(const c of a){const l=c.module.parameters;if(l)try{p=l(p)}catch{return Promise.reject({code:"transform_error",id:c.id,scope:e,message:"parameters transform failed"})}}let h;try{h=s(...p)}catch(c){h=Promise.reject(c)}return h.then(c=>{for(let l=a.length-1;l>=0;l--){const m=a[l],f=m.module.returns;if(f)try{c=f(c)}catch{return n({id:m.id,scope:e,leg:"returns"}),c}}return c},c=>{for(let l=a.length-1;l>=0;l--){const m=a[l],f=m.module.throws;if(f)try{c=f(c)}catch{return n({id:m.id,scope:e,leg:"throws"}),Promise.reject(c)}}return Promise.reject(c)})}}}}function te(e,t,n,u=()=>{}){const o=new Set(e.changes??[]),s=new Map;for(const d of o){const a=t[d];a&&s.set(d,a)}return{contract:e.contract,changes:o,flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:s,shellOrigin:n.shellOrigin,mount:n.mount,pipe:d=>ee(d,s,u)}}(function(){const e=Object.defineProperty,t=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let u=0;for(let o=0;o<n.length;o++){const s=n[o];try{e(t,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[s]}catch{}try{e(t,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[s]=="function"&&u++}if(u&&window!==top)try{parent.postMessage({__frame_rtc_lockdown_failed:u},"*")}catch{}})();const ne=1e4,re=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function oe(e){for(const t of re)if(t.endsWith(":*"))try{const n=new URL(e);if(`${n.protocol}//${n.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}const R=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities??{}}),A=window.__FRAME_PREAMBLE?.transforms,k=window.__FRAME_PREAMBLE?.comments,C=/^[\w.-]+\.js$/,se=/^[a-z][a-z0-9_-]{0,63}$/;let F=null,v=null;function N(e,t,n){try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}let I=!1;function H(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,I=!0):I&&(delete t.dataset.theme,t.style.colorScheme="",I=!1)}const E={mcp:{watchTool:{handlerArg:3}}},P=new Map;function ie(e,t){const n=P.get(e);if(!n)return;Object.assign(n.impl,t),n.impl.__settled=()=>Promise.reject({code:"capability_removed",message:`${e}: method not in this runtime`});const u=n.queue;n.queue=[];for(const o of u){const s=t[o.method];if(s)if(E[e]?.[o.method])try{o.resolve(s(...o.args))}catch{O(o,E[e][o.method].handlerArg,{code:"transform_error",message:`${e}.${o.method} rejected its arguments`})}else s(...o.args).then(o.resolve,o.reject);else{const d={code:"capability_removed",message:`${e}.${o.method} is not in this runtime`},a=E[e]?.[o.method];if(a){O(o,a.handlerArg,d);continue}o.reject(d)}}}function $(e,t){const n=P.get(e);if(!n)return;n.impl.__settled=()=>Promise.reject(t);const u=n.queue;n.queue=[];for(const o of u){const s=E[e]?.[o.method];if(s){O(o,s.handlerArg,t);continue}o.reject(t)}}function O(e,t,n){if(e.syncState?.dead)return;const u=e.args[t];typeof u=="function"&&queueMicrotask(()=>{if(!e.syncState?.dead)try{u({type:"error",error:n})}catch{}})}const q=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(q&&q.writable===!1)){X(),Z();const e=q?.value??{};N(window,"claude",e);const t=i=>{const p={impl:Object.create(null),queue:[]};P.set(i,p);const h=new Proxy(p.impl,{get:(c,l)=>{if(typeof l!="string"||l==="then"||l==="toJSON"||l==="valueOf")return;if(l==="toString")return Object.prototype.toString;const m=E[i]?.[l];return m?(...f)=>{if(typeof f[m.handlerArg]!="function")throw new TypeError(`${i}.${l} requires a handler function`);const g=c[l];if(g)return g(...f);if(c.__settled){const _={dead:!1},S={args:[...f],syncState:_};return c.__settled().catch(j=>O(S,m.handlerArg,j)),()=>{_.dead=!0}}let y=null;const w={dead:!1};return p.queue.push({method:l,args:f,resolve:_=>{y=typeof _=="function"?_:null,w.dead&&y?.()},reject:()=>{},syncState:w}),()=>{w.dead=!0,y?.()}}:(...f)=>{const g=c[l]??c.__settled;return g?g(...f):new Promise((y,w)=>{p.queue.push({method:l,args:f,resolve:y,reject:w})})}},set:()=>!1});N(e,i,h)};for(const i of Object.keys(R)){if(e[i]!==void 0){N(e,i,e[i]);continue}t(i)}let n=null,u=null,o=0;const s=i=>{i.source!==parent||!oe(i.origin)||G(i.data)&&(n=i.data.__frame_init,v=i.origin,removeEventListener("message",s),clearTimeout(o),u?.())};addEventListener("message",s),parent.postMessage({__frame_connect:!0},"*");const d=new Promise(i=>{u=i,o=setTimeout(()=>{removeEventListener("message",s),i()},ne)}),a=document.readyState==="loading"?new Promise(i=>document.addEventListener("DOMContentLoaded",()=>i(),{once:!0})):Promise.resolve();d.then(async()=>{if(!n||!v){for(const r of P.keys())$(r,{code:"not_granted",message:"frame initialization did not arrive - capability unavailable"});return}H(n.theme);const i=v;let p=!1;addEventListener("message",r=>{if(r.source!==parent||r.origin!==i)return;V(r.data)&&H(r.data.__frame_theme.theme);const b=r.data?.__fc_mode;b&&typeof b=="object"&&!p&&k&&C.test(k)&&(p=!0,h(k).then(L=>L.install?.(i,b.on===!0)).catch(()=>{}))});const h=r=>x(()=>import("/_runtime/"+r),void 0),c=Object.keys(n.capabilities??{});for(const r of c)Object.hasOwn(R,r)||se.test(r)&&e[r]===void 0&&(t(r),$(r,{code:"capability_disabled",message:"capability not in this runtime generation"}));const l=c.filter(r=>Object.hasOwn(R,r)).map(r=>[r,R[r]]).filter(r=>typeof r[1]=="string"&&C.test(r[1])),[m,...f]=await Promise.allSettled([A&&C.test(A)?h(A):Promise.resolve({}),...l.map(([,r])=>h(r))]),g=v;F=te(n,m.status==="fulfilled"&&m.value?.TRANSFORMS||{},{shellOrigin:g,mount:ie},r=>parent.postMessage({__frame_cap_telemetry:r},g));const y=r=>parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:r}},g),w=F;f.forEach((r,b)=>{const L=l[b][0];if(r.status!=="fulfilled"){y(L);return}try{r.value?.install?.(w)}catch{y(L)}});for(const[r,b]of P)b.queue.length===0&&Object.keys(b.impl).length>0||$(r,{code:c.includes(r)?"capability_disabled":"not_granted",message:"capability not available in this session"});await a,parent.postMessage({__frame_ready:!0},v);let _=-1,S=0;const j=()=>{S=0;const r=Math.max(document.documentElement.scrollHeight,document.body?document.body.scrollHeight:0);r!==_&&(_=r,parent.postMessage({__frame_size:!0,h:r},g))},M=()=>{S||(S=setTimeout(j,200))},W=new ResizeObserver(M);W.observe(document.documentElement),document.body&&W.observe(document.body),document.addEventListener("load",M,!0),document.fonts?.ready.then(M,()=>{}),addEventListener("beforeprint",()=>{_=-1,j()}),M(),addEventListener("message",r=>{r.source!==parent||r.origin!==g||J(r.data)&&(_=-1,M())})})}})();</script><!-- /frame-runtime --><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Mezquia Money — Control de Caja</title>
+<style>
+  :root{
+    --bg:#F3F1EA;
+    --surface:#FFFFFF;
+    --surface-2:#FAF8F3;
+    --ink:#191A1F;
+    --ink-dim:#75726A;
+    --ink-faint:#A8A49A;
+    --line:#E7E2D6;
+    --line-soft:#F0ECE1;
+    --shadow:0 1px 2px rgba(25,20,10,.04), 0 8px 24px -12px rgba(25,20,10,.12);
+
+    --indigo:#4B4FDE; --indigo-soft:#ECEBFC;
+    --teal:#128A78; --teal-soft:#E3F4F0;
+    --amber:#C6871F; --amber-soft:#FBEFDA;
+    --green:#2C8C51; --green-soft:#E5F3E9;
+    --coral:#D65B44; --coral-soft:#FBEAE5;
+
+    --danger:#C6432F;
+    --focus:#4B4FDE;
+
+    --font-display:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --font-mono:"SF Mono","Cascadia Code","Consolas","Liberation Mono",monospace;
+  }
+  :root[data-theme="dark"]{
+    --bg:#14151A; --surface:#1B1D23; --surface-2:#20222A;
+    --ink:#F1EFEA; --ink-dim:#9B978E; --ink-faint:#6C6A64;
+    --line:#2C2E36; --line-soft:#24262E;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+    --indigo:#8C8FFF; --indigo-soft:#26273F;
+    --teal:#3FC7AE; --teal-soft:#17322E;
+    --amber:#E3A94A; --amber-soft:#332711;
+    --green:#5BBE7E; --green-soft:#173420;
+    --coral:#E88972; --coral-soft:#3A241E;
+    --danger:#E5695A;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#14151A; --surface:#1B1D23; --surface-2:#20222A;
+      --ink:#F1EFEA; --ink-dim:#9B978E; --ink-faint:#6C6A64;
+      --line:#2C2E36; --line-soft:#24262E;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+      --indigo:#8C8FFF; --indigo-soft:#26273F;
+      --teal:#3FC7AE; --teal-soft:#17322E;
+      --amber:#E3A94A; --amber-soft:#332711;
+      --green:#5BBE7E; --green-soft:#173420;
+      --coral:#E88972; --coral-soft:#3A241E;
+      --danger:#E5695A;
+    }
+  }
+  *{box-sizing:border-box;}
+  #fin{
+    background:var(--bg); color:var(--ink); font-family:var(--font-body);
+    min-height:100%; line-height:1.5; font-size:14px;
+  }
+  #fin .shell{ max-width:1180px; margin:0 auto; padding:28px 24px 64px; }
+
+  #fin ::selection{ background:var(--indigo); color:#fff; }
+  #fin *:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:4px; }
+
+  /* ---------- header ---------- */
+  #fin .topbar{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px; flex-wrap:wrap; }
+  #fin .brand{ display:flex; align-items:center; gap:12px; }
+  #fin .brand-mark{
+    width:40px; height:40px; border-radius:11px; background:var(--indigo); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:var(--font-display);
+    font-size:19px; font-weight:700; flex:none;
+  }
+  #fin .brand-name{ font-family:var(--font-display); font-size:17px; font-weight:700; letter-spacing:-.01em; }
+  #fin .brand-sub{ font-size:12px; color:var(--ink-dim); }
+  #fin .topbar-right{ display:flex; align-items:center; gap:10px; }
+  #fin .period-picker{ display:flex; gap:6px; }
+  #fin select{
+    background:var(--surface); border:1px solid var(--line); color:var(--ink);
+    border-radius:8px; padding:8px 10px; font-family:var(--font-body); font-size:13px; cursor:pointer;
+  }
+  #fin select:focus{ outline:none; border-color:var(--indigo); }
+  #fin button{ font-family:var(--font-body); cursor:pointer; }
+  #fin .btn{
+    border-radius:8px; border:1px solid var(--line); background:var(--surface); color:var(--ink);
+    padding:8px 14px; font-size:13px; font-weight:600; transition:border-color .15s,background .15s;
+  }
+  #fin .btn:hover{ border-color:var(--indigo); }
+  #fin .btn-primary{ background:var(--indigo); border-color:var(--indigo); color:#fff; }
+  #fin .btn-primary:hover{ background:#3d40c9; border-color:#3d40c9; }
+  #fin .btn-danger{ color:var(--danger); }
+  #fin .btn-danger:hover{ border-color:var(--danger); background:var(--coral-soft); }
+  #fin .btn-block{ width:100%; padding:11px 14px; font-size:13.5px; }
+
+  /* ---------- hero ---------- */
+  #fin .hero{ margin-bottom:24px; }
+  #fin .hero h1{ font-family:var(--font-display); font-size:30px; font-weight:700; letter-spacing:-.01em; text-wrap:balance; margin:0 0 6px; }
+  #fin .hero p{ color:var(--ink-dim); font-size:14px; max-width:62ch; margin:0; }
+
+  /* ---------- kpis ---------- */
+  #fin .kpis{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:22px; }
+  @media(min-width:760px){ #fin .kpis{ grid-template-columns:repeat(4,1fr); } }
+  #fin .kpi{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow); }
+  #fin .kpi-icon{ width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+  #fin .kpi-icon svg{ width:17px; height:17px; }
+  #fin .kpi-val{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; font-size:21px; font-weight:600; letter-spacing:-.01em; }
+  #fin .kpi-label{ font-size:12px; color:var(--ink-dim); margin-top:3px; }
+
+  /* ---------- layout grid ---------- */
+  #fin .grid2{ display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:16px; }
+  @media(min-width:900px){ #fin .grid2{ grid-template-columns:1.15fr .85fr; align-items:start; } }
+  #fin .stack{ display:flex; flex-direction:column; gap:16px; }
+
+  #fin .card{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:var(--shadow); }
+  #fin .card h3{ font-family:var(--font-display); font-size:16px; font-weight:700; margin:0 0 4px; }
+  #fin .card-sub{ font-size:12.5px; color:var(--ink-dim); margin:0 0 16px; }
+
+  #fin label{ display:block; font-size:12px; font-weight:600; color:var(--ink-dim); margin-bottom:6px; }
+  #fin input[type=text], #fin input[type=number]{
+    width:100%; background:var(--surface-2); border:1px solid var(--line); color:var(--ink);
+    border-radius:8px; padding:9px 11px; font-family:var(--font-mono); font-size:13.5px;
+  }
+  #fin input:focus{ outline:none; border-color:var(--indigo); background:var(--surface); }
+  #fin input:disabled{ color:var(--ink-faint); }
+  #fin .field{ margin-bottom:14px; }
+  #fin .row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  #fin .row3{ display:grid; grid-template-columns:1fr 96px 30px; gap:8px; align-items:end; }
+  #fin .addrow-btn{ width:100%; margin-top:2px; border-style:dashed; color:var(--ink-dim); }
+  #fin .addrow-btn:hover{ color:var(--indigo); }
+  #fin .divider{ height:1px; background:var(--line-soft); margin:18px 0; }
+  #fin .small{ font-size:11.5px; color:var(--ink-dim); }
+  #fin .btn-ghost-icon{ border:none; background:transparent; padding:4px 8px; font-size:15px; color:var(--ink-faint); border-radius:6px; }
+  #fin .btn-ghost-icon:hover{ color:var(--danger); background:var(--coral-soft); }
+
+  #fin input[type=checkbox], #fin input[type=radio]{ width:auto; accent-color:var(--indigo); }
+  #fin .check-label,#fin .radio-label{
+    display:flex; align-items:center; gap:8px; font-size:13px; font-weight:400; color:var(--ink);
+    margin-bottom:0; cursor:pointer;
+  }
+
+  /* ---------- config drawer ---------- */
+  #fin .config-card{ border-color:var(--indigo); }
+  #fin .config-head{ display:flex; justify-content:space-between; align-items:center; }
+
+  /* ---------- result / cascade ---------- */
+  #fin .empty{ color:var(--ink-faint); font-size:13px; padding:20px 0; text-align:center; }
+  #fin .step{
+    display:grid; grid-template-columns:20px 1fr auto; gap:12px; align-items:start;
+    padding:11px 0; border-bottom:1px dashed var(--line-soft);
+  }
+  #fin .step:last-child{ border-bottom:none; }
+  #fin .step .num{ font-family:var(--font-mono); color:var(--ink-faint); font-size:11px; padding-top:2px; }
+  #fin .step .label{ font-size:13.5px; font-weight:600; }
+  #fin .step .sub{ font-size:11.5px; color:var(--ink-dim); margin-top:2px; }
+  #fin .step .amt{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; font-size:14px; text-align:right; white-space:nowrap; }
+  #fin .amt.neg{ color:var(--danger); }
+  #fin .amt.pos{ color:var(--teal); font-weight:600; }
+  #fin .amt.neutral{ color:var(--ink-faint); }
+  #fin .warn{ background:var(--coral-soft); border:1px solid var(--coral); color:var(--danger); border-radius:10px; padding:10px 14px; font-size:12.5px; margin-bottom:14px; }
+
+  #fin .destino{ background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-top:14px; }
+  #fin .destino h4{ font-size:11px; font-family:var(--font-body); text-transform:uppercase; letter-spacing:.06em; color:var(--ink-dim); margin:0 0 10px; font-weight:700; }
+  #fin .destino .line{ display:flex; justify-content:space-between; align-items:baseline; font-size:13.5px; padding:5px 0; gap:10px; }
+  #fin .destino .line .path{ color:var(--ink-dim); font-size:11.5px; }
+  #fin .destino .line .amt{ font-size:13.5px; }
+
+  /* ---------- chart ---------- */
+  #fin .chart-legend{ display:flex; gap:16px; margin-bottom:10px; flex-wrap:wrap; }
+  #fin .legend-item{ display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-dim); }
+  #fin .legend-dot{ width:9px; height:9px; border-radius:3px; flex:none; }
+  #fin canvas#trendChart{ width:100%; height:180px; display:block; }
+
+  /* ---------- accounts panel ---------- */
+  #fin .acct-row{ display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line-soft); gap:10px; }
+  #fin .acct-row:last-child{ border-bottom:none; }
+  #fin .acct-name{ display:flex; align-items:center; gap:9px; font-size:13px; }
+  #fin .acct-dot{ width:9px; height:9px; border-radius:50%; flex:none; }
+  #fin .acct-role{ font-size:11px; color:var(--ink-faint); }
+  #fin .acct-val{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; font-size:13.5px; font-weight:600; }
+
+  /* ---------- history table ---------- */
+  #fin .history-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px; }
+  #fin table{ width:100%; border-collapse:collapse; font-size:12.5px; }
+  #fin th{ text-align:left; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); font-weight:700; padding:8px 10px; border-bottom:1px solid var(--line); }
+  #fin td{ padding:9px 10px; border-bottom:1px solid var(--line-soft); font-family:var(--font-mono); font-variant-numeric:tabular-nums; color:var(--ink); }
+  #fin tr:hover td{ background:var(--surface-2); }
+  #fin .table-wrap{ overflow-x:auto; }
+  :root[data-theme="dark"] #fin .history-card th{ color:var(--ink); }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]) #fin .history-card th{ color:var(--ink); }
+  }
+
+  #fin details.year-group{ margin-bottom:12px; border:1px solid var(--line); border-radius:12px; padding:12px 16px; background:var(--surface-2); }
+  #fin details.year-group > summary{ font-family:var(--font-display); font-size:17px; font-weight:700; cursor:pointer; list-style:none; color:var(--indigo); }
+  #fin details.year-group > summary::-webkit-details-marker{ display:none; }
+  #fin details.year-group > summary::before{ content:'▸ '; color:var(--ink-faint); font-family:var(--font-body); }
+  #fin details.year-group[open] > summary::before{ content:'▾ '; }
+  #fin details.month-group{ margin:10px 0 0 10px; border-left:2px solid var(--line); padding-left:14px; }
+  #fin details.month-group > summary{ font-family:var(--font-mono); font-size:12.5px; cursor:pointer; list-style:none; padding:5px 0; color:var(--ink); }
+  #fin details.month-group > summary::-webkit-details-marker{ display:none; }
+  #fin details.month-group > summary::before{ content:'▸ '; color:var(--ink-faint); font-family:var(--font-body); }
+  #fin details.month-group[open] > summary::before{ content:'▾ '; }
+</style>
+
+<div id="fin">
+  <div class="shell">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">M</span>
+        <div>
+          <div class="brand-name">Mezquia Money</div>
+          <div class="brand-sub">Control de caja personal</div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="period-picker">
+          <select id="inMesNum" aria-label="Mes"><option value="01">Enero</option><option value="02">Febrero</option><option value="03">Marzo</option><option value="04">Abril</option><option value="05">Mayo</option><option value="06">Junio</option><option value="07">Julio</option><option value="08">Agosto</option><option value="09">Septiembre</option><option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option></select>
+          <select id="inAnio" aria-label="Año"><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option></select>
+        </div>
+        <button class="btn" id="configToggle" type="button">⚙ Reglas</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 id="heroTitle">Buenos días</h1>
+      <p>Cada vez que cobras un pago, regístralo aquí. Se reparte en cascada entre producción, empresa, fondo de emergencia, inversión y tu salario — y te dice exactamente a qué cuenta mover cada parte.</p>
+    </section>
+
+    <div id="loadingMsg" class="small" style="display: none;">Cargando datos guardados…</div>
+
+    <div id="appBody" style="display: block;">
+
+      <section class="kpis" id="kpiRow">
+      <div class="kpi">
+        <div class="kpi-icon" style="background:var(--indigo-soft); color:var(--indigo);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div>
+        <div class="kpi-val">$0.00</div>
+        <div class="kpi-label">Cobrado en Julio 2026</div>
+      </div>
+    
+      <div class="kpi">
+        <div class="kpi-icon" style="background:var(--teal-soft); color:var(--teal);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+        <div class="kpi-val">$0.00</div>
+        <div class="kpi-label">Producción reservada</div>
+      </div>
+    
+      <div class="kpi">
+        <div class="kpi-icon" style="background:var(--amber-soft); color:var(--amber);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg></div>
+        <div class="kpi-val">$0.00</div>
+        <div class="kpi-label">Ahorro (emergencia + inversión)</div>
+      </div>
+    
+      <div class="kpi">
+        <div class="kpi-icon" style="background:var(--coral-soft); color:var(--coral);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path></svg></div>
+        <div class="kpi-val">$0.00</div>
+        <div class="kpi-label">Tuyo (salario + personal)</div>
+      </div>
+    </section>
+
+      <div class="card config-card" id="configCard" style="display: block; margin-bottom: 16px;">
+        <div class="config-head">
+          <div>
+            <h3>Reglas de reparto</h3>
+            <p class="card-sub">Se aplican a todo pago nuevo que calcules.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label>Costo por video (edición)</label>
+            <input type="number" id="cfgCostoVideo" value="30">
+          </div>
+          <div class="field">
+            <label>% Empresa (sobre neto post-producción)</label>
+            <input type="number" id="cfgPctEmpresa" value="30">
+          </div>
+          <div class="field">
+            <label>% Fondo emergencia (sobre resto)</label>
+            <input type="number" id="cfgPctEmergencia" value="30">
+          </div>
+          <div class="field">
+            <label>Monto fijo inversiones ($)</label>
+            <input type="number" id="cfgInvFijo" value="500">
+          </div>
+          <div class="field">
+            <label>% Inversión largo plazo (del monto fijo)</label>
+            <input type="number" id="cfgInvLargoPct" value="50">
+          </div>
+          <div class="field">
+            <label>% Salario (sobre resto final)</label>
+            <input type="number" id="cfgPctSalario" value="20">
+          </div>
+        </div>
+        <button class="btn btn-primary" id="saveConfigBtn" type="button">Guardar configuración</button>
+      </div>
+
+      <div class="grid2">
+        <div class="stack">
+          <div class="card">
+            <h3>Nuevo pago recibido</h3>
+            <p class="card-sub">Completa los datos del cobro para calcular el reparto.</p>
+
+            <div class="row">
+              <div class="field">
+                <label>Cliente</label>
+                <input type="text" id="inCliente" placeholder="Ej: Orlando Tires">
+              </div>
+              <div class="field">
+                <label>Cobrado en AMEX Business ($)</label>
+                <input type="number" id="inCobrado" placeholder="0.00">
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Obligación inmediata (deuda, tarjeta, etc — opcional)</label>
+              <input type="number" id="inDeuda" placeholder="0.00">
+            </div>
+
+            <div class="divider"></div>
+
+            <label>Producción</label>
+            <div class="row" style="margin-bottom:10px;">
+              <div class="field" style="margin-bottom:0;">
+                <label class="small" style="font-weight:400;">Nº videos de edición</label>
+                <input type="number" id="inVideos" placeholder="0">
+              </div>
+              <div class="field" style="margin-bottom:0;">
+                <label class="small" style="font-weight:400;">Costo edición (auto)</label>
+                <input type="text" id="inEdicionAuto" disabled="" value="$0.00">
+              </div>
+            </div>
+
+            <div id="otrosGastosWrap"></div>
+            <button class="btn addrow-btn" id="addGastoBtn" type="button">+ Añadir otro gasto de producción (diseño, filmmaker, miniaturas…)</button>
+
+            <div class="divider"></div>
+
+            <label>Inversión en este pago</label>
+            <div class="field" style="margin-bottom:10px;">
+              <label class="check-label">
+                <input type="checkbox" id="inInvertirToggle">
+                Retirar dinero para inversión en este pago
+              </label>
+              <div class="small" style="margin-top:4px;">Si lo dejas sin marcar, este pago no reserva nada para inversión — sigue de largo hacia salario y personal.</div>
+            </div>
+            <div id="invOptionsWrap" style="display:none;">
+              <div class="row" style="margin-bottom:10px;">
+                <label class="radio-label"><input type="radio" name="invMode" id="invModeFijo" value="fixed" checked=""> Monto fijo</label>
+                <label class="radio-label"><input type="radio" name="invMode" id="invModePct" value="percent"> Porcentaje</label>
+              </div>
+              <div class="field">
+                <label id="invValueLabel">Monto fijo ($)</label>
+                <input type="number" id="inInvValue" placeholder="500">
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <button class="btn btn-primary btn-block" id="calcularBtn" type="button">Calcular reparto</button>
+          </div>
+
+          <div class="card" id="resultCard">
+            <h3>Resultado</h3>
+            <div class="empty" id="resultEmpty">Completa el formulario y pulsa "Calcular reparto" para ver la cascada.</div>
+            <div id="resultBody" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <h3 id="chartTitle">Cobrado vs. tuyo</h3>
+            <p class="card-sub">Por mes, del año seleccionado.</p>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span>Cobrado</span>
+              <span class="legend-item"><span class="legend-dot" style="background:var(--coral)"></span>Tuyo (salario + personal + ahorro)</span>
+            </div>
+            <canvas id="trendChart" width="541" height="225"></canvas>
+          </div>
+
+          <div class="card">
+            <h3>Cuentas</h3>
+            <p class="card-sub" id="acctSub">Movimientos de Julio 2026.</p>
+            <div id="acctList">
+      <div class="acct-row">
+        <div class="acct-name"><span class="acct-dot" style="background:var(--teal)"></span>
+          <div><div>SoFi Checking</div><div class="acct-role">Producción</div></div>
+        </div>
+        <div class="acct-val">$0.00</div>
+      </div>
+    
+      <div class="acct-row">
+        <div class="acct-name"><span class="acct-dot" style="background:var(--indigo)"></span>
+          <div><div>AMEX Business</div><div class="acct-role">Reserva empresa</div></div>
+        </div>
+        <div class="acct-val">$0.00</div>
+      </div>
+    
+      <div class="acct-row">
+        <div class="acct-name"><span class="acct-dot" style="background:var(--amber)"></span>
+          <div><div>AMEX Savings</div><div class="acct-role">Fondo de emergencia</div></div>
+        </div>
+        <div class="acct-val">$0.00</div>
+      </div>
+    
+      <div class="acct-row">
+        <div class="acct-name"><span class="acct-dot" style="background:var(--green)"></span>
+          <div><div>Fidelity</div><div class="acct-role">Inversión</div></div>
+        </div>
+        <div class="acct-val">$0.00</div>
+      </div>
+    
+      <div class="acct-row">
+        <div class="acct-name"><span class="acct-dot" style="background:var(--coral)"></span>
+          <div><div>Chase</div><div class="acct-role">Salario + personal</div></div>
+        </div>
+        <div class="acct-val">$0.00</div>
+      </div>
+    </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="card history-card">
+        <div class="history-head">
+          <h3 style="margin:0;">Historial por año y mes</h3>
+          <div style="display:flex; gap:8px;">
+            <button class="btn btn-danger" id="clearMonthBtn" type="button">Borrar este mes</button>
+            <button class="btn btn-danger" id="clearAllBtn" type="button">Borrar todo</button>
+          </div>
+        </div>
+        <div id="historyWrap"><div class="empty">Aún no has guardado ningún pago.</div></div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const CFG_KEY = 'mm_config_v1';
+  const HIST_KEY = 'mm_history_v1';
+
+  let config = { costoVideo:30, pctEmpresa:30, pctEmergencia:30, invFijo:500, invLargoPct:50, pctSalario:20 };
+  let history = [];
+  let otrosGastos = [];
+  let gastoIdSeq = 1;
+  let lastCalc = null;
+
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => {
+    if (isNaN(n)) n = 0;
+    return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  };
+  const fmtShort = (n) => {
+    if (isNaN(n)) n = 0;
+    const abs = Math.abs(n);
+    if(abs>=1000) return (n/1000).toFixed(1).replace(/\.0$/,'') + 'k';
+    return Math.round(n).toString();
+  };
+  const niceCeil = (v) => {
+    if (v <= 0) return 1;
+    const exp = Math.floor(Math.log10(v));
+    const base = Math.pow(10, exp);
+    const norm = v / base;
+    let niceNorm;
+    if(norm <= 1) niceNorm = 1;
+    else if(norm <= 2) niceNorm = 2;
+    else if(norm <= 5) niceNorm = 5;
+    else niceNorm = 10;
+    return niceNorm * base;
+  };
+
+  const MESES_ES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const MESES_CORTO = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+
+  function monthLabel(key){
+    if(!key || key==='0000-00') return 'Sin mes registrado';
+    const [y,m] = key.split('-').map(Number);
+    return `${MESES_ES[m-1]} ${y}`;
+  }
+  function getMesKey(){ return `${$('inAnio').value}-${$('inMesNum').value}`; }
+
+  function populateMesSelects(){
+    const anioSel = $('inAnio');
+    const now = new Date();
+    const startY = now.getFullYear() - 1, endY = now.getFullYear() + 5;
+    const years = [];
+    for(let y=startY; y<=endY; y++) years.push(y);
+    anioSel.innerHTML = years.map(y=>`<option value="${y}">${y}</option>`).join('');
+    anioSel.value = now.getFullYear();
+
+    const mesSel = $('inMesNum');
+    mesSel.innerHTML = MESES_ES.map((n,i)=>`<option value="${String(i+1).padStart(2,'0')}">${n}</option>`).join('');
+    mesSel.value = String(now.getMonth()+1).padStart(2,'0');
+
+    anioSel.addEventListener('change', ()=>{ renderAll(); });
+    mesSel.addEventListener('change', ()=>{ renderAll(); });
+
+    const hour = now.getHours();
+    $('heroTitle').textContent = hour < 12 ? 'Buenos días' : hour < 19 ? 'Buenas tardes' : 'Buenas noches';
+  }
+
+  function loadData(){
+    try{
+      const c = localStorage.getItem(CFG_KEY);
+      if(c) config = JSON.parse(c);
+    }catch(e){ /* no config saved yet */ }
+    try{
+      const h = localStorage.getItem(HIST_KEY);
+      if(h) history = JSON.parse(h);
+    }catch(e){ history = []; }
+
+    $('cfgCostoVideo').value = config.costoVideo;
+    $('cfgPctEmpresa').value = config.pctEmpresa;
+    $('cfgPctEmergencia').value = config.pctEmergencia;
+    $('cfgInvFijo').value = config.invFijo;
+    $('cfgInvLargoPct').value = config.invLargoPct;
+    $('cfgPctSalario').value = config.pctSalario;
+
+    populateMesSelects();
+    $('inInvValue').placeholder = config.invFijo;
+
+    $('loadingMsg').style.display = 'none';
+    $('appBody').style.display = 'block';
+    renderAll();
+  }
+
+  function renderAll(){
+    renderHistory();
+    renderKpis();
+    renderAccounts();
+    renderChart();
+  }
+
+  $('inInvertirToggle').addEventListener('change', (e)=>{
+    $('invOptionsWrap').style.display = e.target.checked ? 'block' : 'none';
+  });
+  document.querySelectorAll('input[name="invMode"]').forEach(r=>{
+    r.addEventListener('change', ()=>{
+      const mode = document.querySelector('input[name="invMode"]:checked').value;
+      if(mode==='fixed'){
+        $('invValueLabel').textContent = 'Monto fijo ($)';
+        $('inInvValue').placeholder = config.invFijo;
+      } else {
+        $('invValueLabel').textContent = 'Porcentaje (%)';
+        $('inInvValue').placeholder = '20';
+      }
+    });
+  });
+
+  function saveConfig(){
+    config = {
+      costoVideo: parseFloat($('cfgCostoVideo').value)||0,
+      pctEmpresa: parseFloat($('cfgPctEmpresa').value)||0,
+      pctEmergencia: parseFloat($('cfgPctEmergencia').value)||0,
+      invFijo: parseFloat($('cfgInvFijo').value)||0,
+      invLargoPct: parseFloat($('cfgInvLargoPct').value)||0,
+      pctSalario: parseFloat($('cfgPctSalario').value)||0,
+    };
+    try{ localStorage.setItem(CFG_KEY, JSON.stringify(config)); }catch(e){ console.error('No se pudo guardar la configuración', e); }
+  }
+  function saveHistory(){
+    try{ localStorage.setItem(HIST_KEY, JSON.stringify(history)); }catch(e){ console.error('No se pudo guardar el historial', e); }
+  }
+
+  $('configToggle').addEventListener('click', ()=>{
+    const card = $('configCard');
+    card.style.display = card.style.display === 'none' ? 'block' : 'none';
+  });
+  $('saveConfigBtn').addEventListener('click', ()=>{
+    saveConfig();
+    $('saveConfigBtn').textContent = 'Guardado ✓';
+    setTimeout(()=>{ $('saveConfigBtn').textContent = 'Guardar configuración'; }, 1400);
+  });
+
+  $('inVideos').addEventListener('input', updateEdicionAuto);
+  function updateEdicionAuto(){
+    const n = parseFloat($('inVideos').value)||0;
+    $('inEdicionAuto').value = fmt(n * config.costoVideo);
+  }
+
+  function renderGastos(){
+    const wrap = $('otrosGastosWrap');
+    wrap.innerHTML = '';
+    otrosGastos.forEach(g=>{
+      const row = document.createElement('div');
+      row.className = 'row3';
+      row.style.marginBottom = '8px';
+      row.innerHTML = `
+        <div class="field" style="margin-bottom:0;">
+          <input type="text" placeholder="Categoría (ej: Diseño)" data-id="${g.id}" data-f="cat" value="${g.categoria||''}">
+        </div>
+        <div class="field" style="margin-bottom:0;">
+          <input type="number" placeholder="$" data-id="${g.id}" data-f="monto" value="${g.monto||''}">
+        </div>
+        <button class="btn-ghost-icon" data-del="${g.id}" title="Eliminar" type="button">✕</button>
+      `;
+      wrap.appendChild(row);
+    });
+    wrap.querySelectorAll('input').forEach(inp=>{
+      inp.addEventListener('input', (e)=>{
+        const id = parseInt(e.target.dataset.id);
+        const f = e.target.dataset.f;
+        const g = otrosGastos.find(x=>x.id===id);
+        if(!g) return;
+        if(f==='cat') g.categoria = e.target.value;
+        else g.monto = parseFloat(e.target.value)||0;
+      });
+    });
+    wrap.querySelectorAll('[data-del]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        otrosGastos = otrosGastos.filter(x=>x.id!==parseInt(btn.dataset.del));
+        renderGastos();
+      });
+    });
+  }
+  $('addGastoBtn').addEventListener('click', ()=>{
+    otrosGastos.push({id:gastoIdSeq++, categoria:'', monto:0});
+    renderGastos();
+  });
+
+  function calcular(){
+    const cliente = $('inCliente').value.trim() || 'Sin nombre';
+    const cobrado = parseFloat($('inCobrado').value)||0;
+    const deuda = parseFloat($('inDeuda').value)||0;
+    const videos = parseFloat($('inVideos').value)||0;
+    const edicion = videos * config.costoVideo;
+    const otros = otrosGastos.reduce((s,g)=>s+(g.monto||0),0);
+    const produccionTotal = edicion + otros;
+
+    let disponible = cobrado - deuda;
+    const neto = disponible - produccionTotal;
+
+    const empresa = Math.max(neto,0) * (config.pctEmpresa/100);
+    const rem1 = neto - empresa;
+    const fondoEmergencia = Math.max(rem1,0) * (config.pctEmergencia/100);
+    const rem2 = rem1 - fondoEmergencia;
+
+    const invertir = $('inInvertirToggle').checked;
+    const invMode = invertir && document.querySelector('input[name="invMode"]:checked')
+      ? document.querySelector('input[name="invMode"]:checked').value : 'fixed';
+    const invValue = parseFloat($('inInvValue').value) || (invMode==='fixed' ? config.invFijo : 0);
+
+    let invFijo = 0;
+    if(invertir){
+      invFijo = invMode==='fixed'
+        ? Math.min(invValue, Math.max(rem2,0))
+        : Math.max(rem2,0) * (invValue/100);
+    }
+    const invLargo = invFijo * (config.invLargoPct/100);
+    const invOpciones = invFijo - invLargo;
+    const rem3 = rem2 - invFijo;
+    const salario = Math.max(rem3,0) * (config.pctSalario/100);
+    const personal = rem3 - salario;
+
+    const insuficiente = neto < 0 || (invertir && invMode==='fixed' && invValue > Math.max(rem2,0));
+
+    lastCalc = {
+      cliente, cobrado, deuda, videos, edicion, otros, otrosDetalle:[...otrosGastos],
+      produccionTotal, neto, empresa, fondoEmergencia, rem2, invertir, invMode, invValue,
+      invFijo, invLargo, invOpciones, salario, personal, rem3, mes: getMesKey(), date: new Date().toISOString()
+    };
+    renderResult(lastCalc, insuficiente);
+  }
+
+  function renderResult(c, insuficiente){
+    $('resultEmpty').style.display = 'none';
+    const body = $('resultBody');
+    body.style.display = 'block';
+
+    let warnHtml = '';
+    if(c.neto < 0){
+      warnHtml = `<div class="warn">⚠ El cobro no alcanza para cubrir la obligación + producción. Neto negativo: ${fmt(c.neto)}. Revisa el monto antes de mover dinero.</div>`;
+    } else if(insuficiente){
+      warnHtml = `<div class="warn">⚠ Pediste retirar ${fmt(c.invValue)} para inversión, pero solo quedan ${fmt(c.rem2)} disponibles después del fondo de emergencia. Se ajustó a ${fmt(c.invFijo)}.</div>`;
+    }
+
+    const invSub = c.invertir
+      ? `Largo plazo ${fmt(c.invLargo)} + Opciones ${fmt(c.invOpciones)} · AMEX Business → Chase → Fidelity` + (c.invMode==='percent' ? ` · ${c.invValue}% de lo disponible` : '')
+      : 'No marcaste este pago para inversión — se acumula en caja y podrás retirarlo de un pago futuro';
+
+    const steps = [
+      c.deuda>0 ? {n:'0', label:'Obligación inmediata pagada primero', sub:'Deuda / tarjeta de crédito', amt:-c.deuda} : null,
+      {n:'1', label:'Producción reservada', sub:`Edición: ${c.videos} video(s) × ${fmt(config.costoVideo)} = ${fmt(c.edicion)}` + (c.otros>0 ? ` · Otros: ${fmt(c.otros)}` : ''), amt:-c.produccionTotal},
+      {n:'—', label:'Neto (después de producción)', sub:'Base para el resto de la cascada', amt:c.neto, bold:true},
+      {n:'2', label:`Empresa (${config.pctEmpresa}% del neto)`, sub:'Se queda en AMEX Business — gastos/inversión de la empresa', amt:-c.empresa},
+      {n:'3', label:`Fondo de emergencia (${config.pctEmergencia}% del resto)`, sub:'AMEX Business → Chase → AMEX Savings', amt:-c.fondoEmergencia},
+      {n:'4', label:c.invertir ? 'Inversión retirada este pago' : 'Inversión (no retirada este pago)', sub:invSub, amt:-c.invFijo, neutral: !c.invertir},
+      {n:'5', label:`Salario (${config.pctSalario}% del resto final)`, sub:'AMEX Business → Chase', amt:-c.salario},
+      {n:'6', label:'Personal (gastos propios / resto)', sub:'AMEX Business → Chase', amt:-c.personal},
+    ].filter(Boolean);
+
+    let stepsHtml = steps.map(s=>`
+      <div class="step">
+        <div class="num">${s.n}</div>
+        <div>
+          <div class="label" style="${s.bold?'':'font-weight:600;'}">${s.label}</div>
+          <div class="sub">${s.sub}</div>
+        </div>
+        <div class="amt ${s.neutral ? 'neutral' : (s.amt<0?'neg':'pos')}">${s.amt<0?'-':''}${fmt(Math.abs(s.amt))}</div>
+      </div>
+    `).join('');
+
+    const invLine = c.invertir
+      ? `<div class="line"><span>Chase → Fidelity <span class="path">(inversión: ${fmt(c.invLargo)} largo plazo / ${fmt(c.invOpciones)} opciones)</span></span><span class="amt">${fmt(c.invFijo)}</span></div>`
+      : `<div class="line"><span>Fidelity <span class="path">(no se retira este pago)</span></span><span class="amt">$0.00</span></div>`;
+
+    const destinoHtml = `
+      <div class="destino">
+        <h4>Transferencias a hacer ahora</h4>
+        <div class="line"><span>SoFi Checking <span class="path">(producción)</span></span><span class="amt">${fmt(c.produccionTotal)}</span></div>
+        <div class="line"><span>Queda en AMEX Business <span class="path">(reserva empresa)</span></span><span class="amt">${fmt(c.empresa)}</span></div>
+        <div class="line"><span>Chase → AMEX Savings <span class="path">(fondo emergencia)</span></span><span class="amt">${fmt(c.fondoEmergencia)}</span></div>
+        ${invLine}
+        <div class="line"><span>Chase <span class="path">(salario + personal)</span></span><span class="amt">${fmt(c.salario + c.personal)}</span></div>
+      </div>
+    `;
+
+    body.innerHTML = warnHtml + `<div style="margin-bottom:4px;">${stepsHtml}</div>` + destinoHtml +
+      `<button class="btn btn-primary btn-block" id="guardarPagoBtn" type="button" style="margin-top:16px;">Guardar este pago en el historial</button>`;
+
+    $('guardarPagoBtn').addEventListener('click', ()=>{
+      history.unshift(lastCalc);
+      saveHistory();
+      renderAll();
+      $('guardarPagoBtn').textContent = 'Guardado ✓';
+      $('guardarPagoBtn').disabled = true;
+    });
+  }
+
+  $('calcularBtn').addEventListener('click', calcular);
+
+  /* ---------- KPI cards ---------- */
+  const ICONS = {
+    wallet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>',
+    tool: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+    shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>',
+    user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>',
+  };
+
+  function renderKpis(){
+    const activeMes = getMesKey();
+    const filtered = history.filter(c => c.mes === activeMes);
+    const t = filtered.reduce((acc,c)=>{
+      acc.cobrado += c.cobrado||0;
+      acc.produccion += c.produccionTotal||0;
+      acc.ahorro += (c.fondoEmergencia||0) + (c.invFijo||0);
+      acc.tuyo += (c.salario||0) + (c.personal||0);
+      return acc;
+    }, {cobrado:0,produccion:0,ahorro:0,tuyo:0});
+
+    const cards = [
+      {label:`Cobrado en ${monthLabel(activeMes)}`, val:t.cobrado, icon:'wallet', bg:'var(--indigo-soft)', fg:'var(--indigo)'},
+      {label:'Producción reservada', val:t.produccion, icon:'tool', bg:'var(--teal-soft)', fg:'var(--teal)'},
+      {label:'Ahorro (emergencia + inversión)', val:t.ahorro, icon:'shield', bg:'var(--amber-soft)', fg:'var(--amber)'},
+      {label:'Tuyo (salario + personal)', val:t.tuyo, icon:'user', bg:'var(--coral-soft)', fg:'var(--coral)'},
+    ];
+    $('kpiRow').innerHTML = cards.map(k=>`
+      <div class="kpi">
+        <div class="kpi-icon" style="background:${k.bg}; color:${k.fg};">${ICONS[k.icon]}</div>
+        <div class="kpi-val">${fmt(k.val)}</div>
+        <div class="kpi-label">${k.label}</div>
+      </div>
+    `).join('');
+  }
+
+  /* ---------- accounts panel ---------- */
+  function renderAccounts(){
+    const activeMes = getMesKey();
+    const filtered = history.filter(c => c.mes === activeMes);
+    const t = filtered.reduce((acc,c)=>{
+      acc.sofi += c.produccionTotal||0;
+      acc.amex += c.empresa||0;
+      acc.savings += c.fondoEmergencia||0;
+      acc.fidelity += c.invFijo||0;
+      acc.chase += (c.salario||0)+(c.personal||0);
+      return acc;
+    }, {sofi:0,amex:0,savings:0,fidelity:0,chase:0});
+
+    $('acctSub').textContent = `Movimientos de ${monthLabel(activeMes)}.`;
+
+    const accts = [
+      {name:'SoFi Checking', role:'Producción', val:t.sofi, color:'var(--teal)'},
+      {name:'AMEX Business', role:'Reserva empresa', val:t.amex, color:'var(--indigo)'},
+      {name:'AMEX Savings', role:'Fondo de emergencia', val:t.savings, color:'var(--amber)'},
+      {name:'Fidelity', role:'Inversión', val:t.fidelity, color:'var(--green)'},
+      {name:'Chase', role:'Salario + personal', val:t.chase, color:'var(--coral)'},
+    ];
+    $('acctList').innerHTML = accts.map(a=>`
+      <div class="acct-row">
+        <div class="acct-name"><span class="acct-dot" style="background:${a.color}"></span>
+          <div><div>${a.name}</div><div class="acct-role">${a.role}</div></div>
+        </div>
+        <div class="acct-val">${fmt(a.val)}</div>
+      </div>
+    `).join('');
+  }
+
+  /* ---------- chart ---------- */
+  function renderChart(){
+    const canvas = $('trendChart');
+    const year = $('inAnio').value;
+    const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const cssW = canvas.clientWidth || 560, cssH = 180;
+    canvas.width = cssW * dpr; canvas.height = cssH * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,cssW,cssH);
+
+    const cobradoByMonth = new Array(12).fill(0);
+    const tuyoByMonth = new Array(12).fill(0);
+    history.forEach(c=>{
+      if(!c.mes) return;
+      const [y,m] = c.mes.split('-');
+      if(y!==year) return;
+      const idx = parseInt(m,10)-1;
+      cobradoByMonth[idx] += c.cobrado||0;
+      tuyoByMonth[idx] += (c.salario||0)+(c.personal||0)+(c.fondoEmergencia||0)+(c.invFijo||0);
+    });
+
+    const styles = getComputedStyle(canvas);
+    const teal = styles.getPropertyValue('--teal').trim() || '#128A78';
+    const coral = styles.getPropertyValue('--coral').trim() || '#D65B44';
+    const line = styles.getPropertyValue('--line').trim() || '#E7E2D6';
+    const lineSoft = styles.getPropertyValue('--line-soft').trim() || '#F0ECE1';
+    const inkFaint = styles.getPropertyValue('--ink-faint').trim() || '#A8A49A';
+    const fontBody = styles.getPropertyValue('--font-body') || 'sans-serif';
+
+    const padL = 46, padR = 8, padT = 8, padB = 22;
+    const plotW = cssW - padL - padR, plotH = cssH - padT - padB;
+    const maxVal = Math.max(1, ...cobradoByMonth, ...tuyoByMonth);
+    const niceMax = niceCeil(maxVal);
+    const barW = plotW/12 * 0.5;
+
+    const ticks = [0, niceMax/2, niceMax];
+    ticks.forEach(t=>{
+      const ty = padT + plotH - (t/niceMax)*plotH;
+      ctx.strokeStyle = t===0 ? line : lineSoft;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padL, ty); ctx.lineTo(padL+plotW, ty);
+      ctx.stroke();
+
+      ctx.fillStyle = inkFaint;
+      ctx.font = '10px ' + fontBody;
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('$'+fmtShort(t), padL-8, ty);
+    });
+    ctx.textBaseline = 'alphabetic';
+
+    for(let i=0;i<12;i++){
+      const cx = padL + plotW*(i+0.5)/12;
+      const h = (cobradoByMonth[i]/niceMax) * plotH;
+      const x = cx - barW/2, y = padT + plotH - h;
+      ctx.fillStyle = teal;
+      const r = Math.min(4, barW/2, Math.max(h,1));
+      roundRectTop(ctx, x, y, barW, Math.max(h,2), r);
+      ctx.fill();
+
+      ctx.fillStyle = inkFaint;
+      ctx.font = '10px ' + fontBody;
+      ctx.textAlign = 'center';
+      ctx.fillText(MESES_CORTO[i], cx, cssH - 6);
+    }
+
+    ctx.beginPath();
+    ctx.strokeStyle = coral; ctx.lineWidth = 2;
+    for(let i=0;i<12;i++){
+      const cx = padL + plotW*(i+0.5)/12;
+      const h = (tuyoByMonth[i]/niceMax) * plotH;
+      const cy = padT + plotH - h;
+      if(i===0) ctx.moveTo(cx,cy); else ctx.lineTo(cx,cy);
+    }
+    ctx.stroke();
+    for(let i=0;i<12;i++){
+      const cx = padL + plotW*(i+0.5)/12;
+      const h = (tuyoByMonth[i]/niceMax) * plotH;
+      const cy = padT + plotH - h;
+      ctx.beginPath();
+      ctx.fillStyle = coral;
+      ctx.arc(cx,cy,2.5,0,Math.PI*2);
+      ctx.fill();
+    }
+  }
+  function roundRectTop(ctx,x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x, y+h);
+    ctx.lineTo(x, y+r);
+    ctx.quadraticCurveTo(x,y,x+r,y);
+    ctx.lineTo(x+w-r,y);
+    ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+    ctx.lineTo(x+w,y+h);
+    ctx.closePath();
+  }
+  window.addEventListener('resize', ()=>{ if($('appBody').style.display!=='none') renderChart(); });
+
+  /* ---------- summary/history ---------- */
+  $('clearMonthBtn').addEventListener('click', ()=>{
+    const activeMes = getMesKey();
+    const label = monthLabel(activeMes);
+    if(!confirm(`¿Borrar todos los pagos guardados de ${label}? Esta acción no se puede deshacer.`)) return;
+    history = history.filter(c => c.mes !== activeMes);
+    saveHistory();
+    renderAll();
+  });
+  $('clearAllBtn').addEventListener('click', ()=>{
+    if(!confirm('¿Borrar todo el historial de pagos guardado? Esta acción no se puede deshacer.')) return;
+    history = [];
+    saveHistory();
+    renderAll();
+  });
+
+  function renderHistory(){
+    const wrap = $('historyWrap');
+    if(history.length===0){
+      wrap.innerHTML = '<div class="empty">Aún no has guardado ningún pago.</div>';
+      return;
+    }
+    const activeMes = getMesKey();
+    const activeYear = activeMes.split('-')[0];
+
+    const byYear = {};
+    history.forEach((c,i)=>{
+      const mesKey = c.mes || '0000-00';
+      const y = mesKey.split('-')[0];
+      byYear[y] = byYear[y] || {};
+      byYear[y][mesKey] = byYear[y][mesKey] || [];
+      byYear[y][mesKey].push({...c, idx:i});
+    });
+
+    const years = Object.keys(byYear).sort((a,b)=>b-a);
+    let html = years.map(y=>{
+      const monthKeys = Object.keys(byYear[y]).sort((a,b)=> b.localeCompare(a));
+      const monthsHtml = monthKeys.map(mesKey=>{
+        const rows = byYear[y][mesKey];
+        const totalCobrado = rows.reduce((s,r)=>s+(r.cobrado||0),0);
+        const rowsHtml = rows.map(c=>`
+          <tr>
+            <td>${new Date(c.date).toLocaleDateString('es-US')}</td>
+            <td style="font-family:var(--font-body);">${c.cliente}</td>
+            <td>${fmt(c.cobrado)}</td>
+            <td>${fmt(c.produccionTotal)}</td>
+            <td>${fmt(c.empresa)}</td>
+            <td>${fmt(c.fondoEmergencia)}</td>
+            <td>${fmt(c.invFijo)}</td>
+            <td>${fmt(c.salario+c.personal)}</td>
+            <td><button class="btn-ghost-icon" data-hdel="${c.idx}" type="button">✕</button></td>
+          </tr>
+        `).join('');
+        return `
+          <details class="month-group" ${mesKey===activeMes ? 'open' : ''}>
+            <summary>${monthLabel(mesKey)} <span class="small" style="margin-left:6px;">(${rows.length} pago${rows.length!==1?'s':''} · ${fmt(totalCobrado)} cobrado)</span></summary>
+            <div class="table-wrap" style="margin-top:8px;">
+            <table>
+              <thead><tr>
+                <th>Fecha</th><th>Cliente</th><th>Cobrado</th><th>Producción</th><th>Empresa</th><th>Emergencia</th><th>Inversión</th><th>Personal</th><th></th>
+              </tr></thead>
+              <tbody>${rowsHtml}</tbody>
+            </table>
+            </div>
+          </details>
+        `;
+      }).join('');
+      return `
+        <details class="year-group" ${y===activeYear ? 'open' : ''}>
+          <summary>${y}</summary>
+          ${monthsHtml}
+        </details>
+      `;
+    }).join('');
+
+    wrap.innerHTML = html;
+    wrap.querySelectorAll('[data-hdel]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        history.splice(parseInt(btn.dataset.hdel),1);
+        saveHistory();
+        renderAll();
+      });
+    });
+  }
+
+  loadData();
+})();
+</script>
+
+</body></html>
